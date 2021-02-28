@@ -3,7 +3,7 @@
 echo "Logging into FTP with curl"
 
 ## Log into FTP with curl, then find all files with the .mkv extension, and then dump the rsilt into text file called file-list.txt
-curl -l  ftp://${{ secrets.FTP_SERVER }} --user  ${{ secrets.FTP_USER }}:${{ secrets.FTP_PASSWORD }} | grep -oP '.*\.mkv' > file-list.txt
+curl -l  ftp://${{ secrets.FTP_SERVER }}/${{ secrets.FTP_SUBDIR }} --user  ${{ secrets.FTP_USER }}:${{ secrets.FTP_PASSWORD }} | grep -oP '.*\.mkv' > file-list.txt
 
 
 while read filename
