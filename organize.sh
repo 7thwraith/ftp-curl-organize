@@ -15,11 +15,11 @@ echo "$title" >> series.txt
 
 ## Create folders named after series
 echo "attempting to create folder named $title"
-curl -l  ftp:// $FTP_SERVER --user  $FTP_USER:$FTP_PASSWORD -Q "MKD $FTP_SUBDIR/$title" --ftp-create-dirs
+curl -l  ftp://$FTP_SERVER/$FTP_SUBDIR/ --user  $FTP_USER:$FTP_PASSWORD -Q "MKD /$FTP_SUBDIR/$title" --ftp-create-dirs
 
 ## Move files into their respective series folders
 echo "moving files from Series folders to $title"
-curl -l  ftp:// $FTP_SERVER --user  $FTP_USER:$FTP_PASSWORD -Q "-RNFR $FTP_SUBDIR/$filename" -Q "-RNTO $FTP_SUBDIR/$title/$filename" --ftp-create-dirs
+curl -l  ftp://$FTP_SERVER/$FTP_SUBDIR/ --user  $FTP_USER:$FTP_PASSWORD -Q "-RNFR /$FTP_SUBDIR/$filename" -Q "-RNTO /$FTP_SUBDIR/$title/$filename" --ftp-create-dirs
 
 
 done < file-list.txt
