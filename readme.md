@@ -22,3 +22,8 @@ Series Title - 00.mkv
     - FTP_PASSWORD
 3. Configure GitHub actions as needed.
 
+
+
+
+
+# Last Updated: 04/26/2021
