@@ -20,7 +20,7 @@ urlencode() {
 }
 
 
-datastr="$(urlencode $USERFIELD)=$(urlencode $FTP_USER)&$(urlencode $PASSFIELD)=$(urlencode $FTP_PASSWORD)"
+datastr="$(urlencode $USERFIELD)=$(urlencode $DASHBOARD_USER)&$(urlencode $PASSFIELD)=$(urlencode $DASHBOARD_PASSWORD)"
 
 echo "Logging In"
 curl --cookie-jar cookies.txt --data $datastr $DASHBOARD_URL
