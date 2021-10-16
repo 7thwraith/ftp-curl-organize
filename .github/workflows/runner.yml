@@ -47,4 +47,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: sh ./curl.sh
+        run: bash ./curl.sh
