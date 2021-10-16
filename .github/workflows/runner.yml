@@ -39,8 +39,8 @@ jobs:
         PASSFIELD         :  ${{ secrets.PASSFIELD }}
         REFRESH_URL       :  ${{ secrets.REFRESH_URL }}
         USERFIELD         :  ${{ secrets.USERFIELD }}
-        DASHBOARD_USER          :  ${{ secrets.FTP_USER }}
-        DASHBOARD_PASSWORD      :  ${{ secrets.FTP_PASSWORD }}
+        DASHBOARD_USER          :  ${{ secrets.DASHBOARD_USER }}
+        DASHBOARD_PASSWORD      :  ${{ secrets.DASHBOARD_PASSWORD }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
