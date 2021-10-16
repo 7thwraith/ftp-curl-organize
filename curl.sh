@@ -24,3 +24,6 @@ datastr="$(urlencode $USERFIELD)=$(urlencode $FTP_USER)&$(urlencode $PASSFIELD)=
 
 curl --cookie-jar cookies.txt --data $datastr $DASHBOARD_URL
 curl --cookie cookies.txt $REFRESH_URL
+
+
+
