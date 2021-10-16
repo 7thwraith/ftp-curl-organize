@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Courtesy of https://gist.github.com/cdown/1163649
 urlencode() {
